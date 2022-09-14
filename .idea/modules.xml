@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-demo.iml" filepath="$PROJECT_DIR$/eureka-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka-provider/eureka-provider.iml" filepath="$PROJECT_DIR$/eureka-provider/eureka-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feign-api/feign-api.iml" filepath="$PROJECT_DIR$/feign-api/feign-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-order/service-order.iml" filepath="$PROJECT_DIR$/service-order/service-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-product/service-product.iml" filepath="$PROJECT_DIR$/service-product/service-product.iml" />
     </modules>
   </component>
 </project>

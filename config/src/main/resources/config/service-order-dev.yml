@@ -1,0 +1,42 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: service-order
+
+
+# 配置 eureka
+eureka:
+
+  instance:
+    hostname: localhost # 主机名，不配置时根据操作系统的主机名获取
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+  client:
+    register-with-eureka: true #是否讲自己注册到注册中心，默认false
+    fetch-registry: true
+    service-url:  # eureka注册中心的地址信息
+      defaultZone: http://localhost:8083/eureka/
+
+
+# 配置Feign
+feign:
+  httpclient:
+    enabled: true # 开启 Feign使用 httpClient
+    max-connections: 200 # 最大连接数
+    max-connections-per-route: 50 # 每个路径的最大连接数
+
+# 配置 ribbon 负载均衡
+service-product:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+
+
+# 日志配置
+logging:
+  level:
+    cn.cy: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
